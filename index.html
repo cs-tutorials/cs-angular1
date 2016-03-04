@@ -8,21 +8,18 @@
 
     <script type="text/javascript" src="/js/script.js"></script>
     <script type="text/javascript" src="angular.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
 
-    <title>Coworkin-IT</title>
+    <title>CS Tutorial - Shaping Up With Angular</title>
 </head>
 
-<body>
-    <h2>Hello Winter-world. </h2>
+  <body ng-controller="StoreController as store">
     <div class="product row">
-        <h3>
-        <em class="pull-right">Some other product name?</em>
-            <p>Summer made this change</p>
-<!--            summer's comments here-->
-<!--			rich's comments here -->
-    </h3>
+      <h3>
+        {{store.product.name}}
+        <em class="pull-right">{{store.product.price}}</em>
+      </h3>
     </div>
-</body>
+  </body>
 
 </html>
