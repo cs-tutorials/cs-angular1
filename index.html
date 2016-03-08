@@ -15,15 +15,17 @@
 
 <body ng-controller="StoreController as store">
 	<ul class="list-group">
-		<li class="list-group-item" ng-repeat="product in store.products">
-			<div ng-hide="product.isSoldOut">
-				<h3>
-					{{product.name}}
-					<em class="pull-right">${{product.price}}</em>
-				</h3>
-				<p> {{product.description}} </p>
-				<button ng-show="product.canPurchase"> Add to Cart </button>
-			</div>
+		<li class="list-group-item" ng-repeat="product in store.products | orderBy:'-price'">
+			<h3>
+				{{product.name}}
+				<em class="pull-right">{{product.price | currency }}</em>
+		        <!-- Image Gallery  -->
+		        <div class="gallery">
+		          <img ng-src="{{product.images[0]}}" />
+		        </div>
+			</h3>
+			<p> {{product.description}} </p>
+			<button ng-show="product.canPurchase"> Add to Cart </button>
 		</li>
 	</ul>
 </body>
