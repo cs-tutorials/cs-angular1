@@ -20,7 +20,7 @@
 					full: 'azurite-02-full.jpg',
 					thumb: 'azurite-02-thumb.jpg'
 				}
-			]
+			],
 			canPurchase: true,
 			isSoldOut: false
 		},
@@ -37,7 +37,7 @@
 					full: 'dodecahedron-02-full.jpg',
 					thumb: 'dodecahedron-02-thumb.jpg'
 				}
-			]
+			],
 			canPurchase: true,
 			isSoldOut: false
 		},
@@ -54,7 +54,7 @@
 					full: 'pentagonal-02-full.jpg',
 					thumb: 'pentagonal-02-thumb.jpg'
 				}
-			]
+			],
 			canPurchase: false,
 			isSoldOut: false
 		}		
@@ -70,6 +70,7 @@
 			rarity: 7,
 			color: '#CCC',
 			faces: 14,
+			canPurchase: true,
 			images: 
 			[
 				"cs-angular-images/gem-02.gif",
@@ -100,6 +101,7 @@
 			rarity: 6,
 			color: '#EEE',
 			faces: 12,
+			canPurchase: true,
 			images: 
 			[
 				"cs-angular-images/gem-01.gif",
@@ -130,6 +132,7 @@
 			rarity: 2,
 			color: '#000',
 			faces: 6,
+			canPurchase: true,
 			images: 
 			[
 				"cs-angular-images/gem-06.gif",
