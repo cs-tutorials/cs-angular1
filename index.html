@@ -20,8 +20,8 @@
 				{{product.name}}
 				<em class="pull-right">{{product.price | currency }}</em>
 		        <!-- Image Gallery  -->
-		        <div class="gallery">
-		          <img ng-src="{{product.images[0]}}" />
+		        <div class="gallery" ng-show="{{product.images.length}}" ng-repeat="image in product.images">
+		          <img ng-src="{{image}}" />
 		        </div>
 			</h3>
 			<p> {{product.description}} </p>
