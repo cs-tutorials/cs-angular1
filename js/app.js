@@ -3,8 +3,8 @@
   	name: 'Azurite', 
   	price: 2.95, 
   	description: 'Description for Azurite.',
-  	canPurchase: false,
-  	isSoldOut: true
+  	canPurchase: true,
+  	isSoldOut: false
   	 };
   	 
   var app = angular.module('gemStore', []);
