@@ -13,16 +13,19 @@
     <title>CS Tutorial - Shaping Up With Angular</title>
 </head>
 
-	<body ng-controller="StoreController as store">
-		<ul class="list-group">
-		<div ng-repeat="product in store.products">
-			<div ng-hide="product.isSoldOut" class="product row">
-				<h1> {{product.name}} </h1>
-				<h2> ${{product.price}} </h2>
+<body ng-controller="StoreController as store">
+	<ul class="list-group">
+		<li class="list-group-item" ng-repeat="product in store.products">
+			<div ng-hide="product.isSoldOut">
+				<h3>
+					{{product.name}}
+					<em class="pull-right">${{product.price}}</em>
+				</h3>
 				<p> {{product.description}} </p>
 				<button ng-show="product.canPurchase"> Add to Cart </button>
 			</div>
-		</ul>
-	</body>
+		</li>
+	</ul>
+</body>
 
 </html>
