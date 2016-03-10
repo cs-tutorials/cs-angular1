@@ -17,6 +17,13 @@
 		};
 	});
 
+	app.controller('GalleryController', function(){
+		this.current = 0;
+		this.setCurrent = function(newVal){
+			this.current = newVal || 0;
+		};
+	});
+
 	var csGems = 
 	[
 		{
