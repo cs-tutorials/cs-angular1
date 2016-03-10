@@ -5,60 +5,17 @@
 		this.products = csGems;
 	});
 
-	var myGems = 
-	[
-		{ 
-			name: 'Azurite', 
-			price: 4.50, 
-			description: 'Description for Azurite.',
-			images: [
-				{
-					full: 'azurite-01-full.jpg',
-					thumb: 'azurite-01-thumb.jpg'
-				},
-				{
-					full: 'azurite-02-full.jpg',
-					thumb: 'azurite-02-thumb.jpg'
-				}
-			],
-			canPurchase: true,
-			isSoldOut: false
-		},
-		{ 
-			name: 'Dodecahedron', 
-			price: 2.95, 
-			description: 'Description for Dodecahedron.',
-			images: [
-				{
-					full: 'dodecahedron-01-full.jpg',
-					thumb: 'dodecahedron-01-thumb.jpg'
-				},
-				{
-					full: 'dodecahedron-02-full.jpg',
-					thumb: 'dodecahedron-02-thumb.jpg'
-				}
-			],
-			canPurchase: true,
-			isSoldOut: false
-		},
-		{ 
-			name: 'Pentagonal Gem', 
-			price: 5.95, 
-			description: 'Description for Pentagonal Gem.',
-			images: [
-				{
-					full: 'pentagonal-01-full.jpg',
-					thumb: 'pentagonal-01-thumb.jpg'
-				},
-				{
-					full: 'pentagonal-02-full.jpg',
-					thumb: 'pentagonal-02-thumb.jpg'
-				}
-			],
-			canPurchase: false,
-			isSoldOut: false
-		}		
-	];
+	app.controller('TabController', function(){
+		this.tab = 1;
+
+		this.setTab = function(newValue){
+			this.tab = newValue;
+		};
+
+		this.isSet = function(tabName){
+			return this.tab === tabName;
+		};
+	});
 
 	var csGems = 
 	[
