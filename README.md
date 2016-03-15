@@ -2,9 +2,9 @@
 
 Code School's 'Shaping Up with Angular' tutorial practice project
 
-<a href="https://www.codeschool.com/">Code School</a>
+<a target="_blank" href="https://www.codeschool.com/">Code School</a>
 
-Their (free) Intro to Angular.js tutorial, <a href="http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro">Shaping Up With Angular</a>
+Their (free) Intro to Angular.js tutorial, <a target="_blank" href="http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro">Shaping Up With Angular</a>
 
 So, I'm working my way through this tutorial, but also building an actual working version of the website that you mock-build in the tutorial.
 
