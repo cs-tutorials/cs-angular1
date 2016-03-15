@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/cs-angular1/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="/cs-angular1/bootstrap/bootstrap-3.3.6-dist/css/bootstrap.min.css">
     <script type="text/javascript" src="/cs-angular1/js/script.js"></script>
     <script type="text/javascript" src="/cs-angular1/js/angular.min.js"></script>
@@ -26,14 +25,15 @@
 	        <!-- Image Gallery  -->
 	        <div class="gallery" ng-show="{{product.images.length}}" ng-controller="GalleryController as gallery">
 		    	<img ng-src="{{product.images[gallery.current]}}" />
-		    	<ul class="list-inline thumbs">
-		    		<li class="thumbnail" ng-repeat="image in product.images" ng-click="gallery.setCurrent(product.images.length)">
+		    	<ul class="img-thumbnails clearfix">
+		    		<li class="small-image pull-left thumbnail" ng-repeat="image in product.images" ng-click="gallery.setCurrent(product.images.length)">
 		    			<img ng-src="{{image}}" />
 		    		</li>
 		        </ul>
 			</div>
-			<section class="tab" ng-controller="TabController as tabCtrl">
-				<ul class="nav nav-pills">
+			<section class="tab">
+				<product-tabs></product-tabs>
+<!--				<ul class="nav nav-pills">
 					<li ng-class="{ active:tabCtrl.isSet(1) }">
 						<a href ng-click="tabCtrl.setTab(1)">Description</a></li>
 					<li ng-class="{ active:tabCtrl.isSet(2) }">
@@ -60,18 +60,20 @@
 							</blockquote>
 						</li>
 					</ul>
+-->
 					<!-- Review Form -->
-					<form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
+<!--					<form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
 						ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+-->
 						<!-- Preview -->
-						<blockquote>
+<!--						<blockquote>
 							<strong>{{reviewCtrl.review.stars}} Stars</strong>
 							{{reviewCtrl.review.body}}
 							<cite class="clearfix">by: {{reviewCtrl.review.author}}</cite>
 						</blockquote>
-
+-->
 						<!-- Form -->
-						<h4>Submit a Review</h4>
+<!--						<h4>Submit a Review</h4>
 						<fieldset class="form-group">
 							<select class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars" ng-model="reviewCtrl.review.stars" required>
 								<option value="">Rate the Item</option>
@@ -89,6 +91,7 @@
 						</fieldset>
 					</form>
 				</div>
+-->
 			</section>
 		</li>
 	</ul>
