@@ -22,16 +22,10 @@
 			<h3>
 				<product-title></product-title>
 			</h3>
+
 	        <!-- Image Gallery  -->
-	        <div class="gallery" ng-show="{{product.images.length}}" ng-controller="GalleryController as gallery">
-		    	<img ng-src="{{product.images[gallery.current]}}" />
-		    	<ul class="img-thumbnails clearfix">
-		    		<li class="small-image pull-left thumbnail" ng-repeat="image in product.images" ng-click="gallery.setCurrent(product.images.length)">
-		    			<img ng-src="{{image}}" />
-		    		</li>
-		        </ul>
-			</div>
-			<!-- new comment here -->
+	        <product-gallery></product-gallery>
+			
 			<product-tabs></product-tabs>
 		</li>
 	</ul>
