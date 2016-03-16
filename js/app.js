@@ -4,6 +4,15 @@
 	app.controller('StoreController', function(){
 		this.products = csGems;
 	});
+
+	app.controller('StoreDepController', ['$http', '$log', function($http, $log){
+		var store = this;
+		store.products = [];
+
+		$http.get('/store-products.json').success(function(data){
+			store.products = data;
+		});
+	}]);
 	
 	var csGems = 
 	[
