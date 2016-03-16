@@ -1,11 +1,11 @@
 (function(){
 	var app = angular.module('gemStore', ['store-products']);
 
-	app.controller('StoreController', function(){
+	app.controller('StoreDepController', function(){
 		this.products = csGems;
 	});
 
-	app.controller('StoreDepController', ['$http', '$log', function($http, $log){
+	app.controller('StoreController', ['$http', '$log', function($http, $log){
 		var store = this;
 		store.products = [];
 
