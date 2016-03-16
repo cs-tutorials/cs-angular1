@@ -1,17 +1,18 @@
 (function(){
 	var app = angular.module('gemStore', ['store-products']);
 
-	app.controller('StoreDepController', function(){
+	app.controller('StoreController', function(){
 		this.products = csGems;
 	});
 
-	app.controller('StoreController', ['$http', '$log', function($http, $log){
+	app.controller('StoreDepController', ['$http', '$log', function($http, $log){
 		var store = this;
 		store.products = [];
 
-		$http.get('/cs-angular1/store-products.json').success(function(data){
-			store.products = data;
-		});
+		$http.get('/cs-angular1/store-products.json')
+			.success(function(data){
+				store.products = data;
+			});
 	}]);
 	
 	var csGems = 
